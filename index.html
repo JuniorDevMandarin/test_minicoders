@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Minicoders</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <link rel="stylesheet" type="text/css" href="../static/parents_base.css">
+
+
+    <script type="text/javascript" src="../static/js/global_scripts.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10904711824"></script>
+    <script> window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'AW-10904711824');
+    </script>
+    <script> gtag('event', 'conversion', {'send_to': 'AW-10904711824/--M0CNumv8wDEJDl4s8o'}); </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/63764049daff0e1306d7eed8/1gi2um8gs';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+</head>
+
+<body>
+<script>
+    function setCookie(value) {
+        document.cookie = "language=" + value;
+        location.reload();
+    }
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex logo-header" href="/">
+            <img class="minicoders-img-responsive" src="../static/img/Isotype_hr.png"
+                 style="max-width:142px;max-height:54px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                onclick="setWrapper(this)">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item mx-sm-5 active">
+                    <a class="nav-link" style="color: black" href="/parental">My School</a>
+                </li>
+                <li class="nav-item mx-sm-5">
+                    <a class="nav-link" style="color: black" href="/plans">Shedule a demo</a>
+                </li>
+
+            </ul>
+            <div class="my-2 my-lg-0 justify-content-center align-items-center header-right">
+
+
+                <button class="btn btn-light border mx-sm-5 mr-5" type="submit">
+                    <a href="/register">Log in</a>
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="card text-bg-dark">
+  <img style="width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;" src="../static/img/pexels-max-fischer-5212335.png" class="card-img" alt="...">
+
+
+
+
+      <div class="card-img-overlay text-center">
+
+
+
+            <div class="containeer text-center px-0">
+              <div class="row">
+                <div class="col-sm-1 px-0"></div>
+                <div class="col-sm-10 px-0">
+                              <div class="containeer contone">
+                                  <h1 class="card-title hometext1">State-of-the-art educational game experiences that motivate children’s computational thinking development
+                                  </h1>
+
+                                  <h5 class="card-title hometext2">Are you an educator? Schedule a demo and discover what makes the Minicoders play to learn experience unique
+                                  </h5>
+                              </div>
+                              <div class="containeer contonebutton px-0">
+                                  <a href="{% url 'backoffice:scheduledemo' %}">
+                                    <button type="button" style="box-sizing: border-box;
+                                    width: 318px;
+                                    height: 78.7px;
+                                    background: #F06814;
+                                    border: 1px solid #F06814;
+                                    box-shadow: -3px 8px 8px rgba(0, 0, 0, 0.25);
+                                    border-radius: 8px;
+                                    font-family: 'Inter';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;" class="btn btn-primary float-sm-start float-md-end float-lg-end float-xl-end">Schedule a demo!
+                                  </button>
+                                </a>
+                            </div>
+                </div>
+                <div class="col-sm-1 px-0"></div>
+              </div>
+            </div>
+
+
+
+      </div>
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="container text-center" style="background-color: white;">
+              <div class="row">
+                <div class="col-sm-12 col-md-4 mx-0 px-0">
+                </div>
+                <div class="col-sm-12 col-md-4 mx-0 px-0" style="padding-top: 5%;">
+                  <small style="font-family: 'Space Grotesk';font-style: normal;font-weight: 700;font-size: 48px;line-height: 42px;
+                  /* or 88% */text-align: center;
+                  /* Specific/Content/Content 2 */
+                  color: #363D3F;">Why Minicoders?</small>
+                  <br>
+                  <img class="float-start px-5 mt-3" src="../static/img/arrow-right-down-orange.svg" alt="">
+                </div>
+                <div class="col-sm-12 col-md-4 mx-0 px-0">
+                  <img class="float-end" src="../static/img/faqs-header-bg.png" width="310px" alt="">
+                </div>
+              </div>
+            </div>
+
+
+            <!-- ------------------first row------------------------------------------------------------------------- -->
+
+            <div class="container px-5 text-center" style="background-color: #ffffff;">
+              <div class="row">
+                <div class="col-sm-12 col-md-4 mx-0 px-0">
+
+
+
+
+
+
+                  <div class="card border border-0 align-items-center mb-5">
+
+                          <img src="../static/img/homecardimg1.png" style="width: 395px;
+                         " class="card-img-top" alt="...">
+
+                          <h3 style="
+                          width: 377.41px;
+                          left: 52px;
+
+                          /* Global/Basic/Basic Light */
+
+                          background: #FFFFFF;" class="mt-4 mb-5">Motivation</h3>
+
+                            <small class="" style="width: 345px;
+                            height: 315px;
+
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 35px;
+                            /* or 175% */
+
+                            text-align: center;
+
+                            /* Specific/Content/Content 2 */
+
+                            color: #363D3F;
+
+
+                            /* Inside auto layout */
+
+                            flex: none;
+                            order: 1;
+                            flex-grow: 0;">Kids want to play, and they want to play in today’s platforms. Minicoders offers game experiences in popular metaverses, like Roblox and Minecraft, so kids grow curious to learn about computational thinking while enjoying the platforms they love the most.
+                            </small>
+                  </div>
+
+
+
+
+
+
+
+
+                </div>
+                <div class="col-sm-12 col-md-4 mx-0 px-0">
+
+
+
+
+
+                  <div class="card border border-0 align-items-center">
+
+                    <img src="../static/img/homecardimg2.png" style="width: 395px;
+                          " class="card-img-top" alt="...">
+
+                          <h3 style="
+                          width: 377.41px;
+                          left: 52px;
+
+                          /* Global/Basic/Basic Light */
+
+                          background: #FFFFFF;" class="mt-4 mb-5">For everyone</h3>
+
+                          <small class="" style="width: 345px;
+                          height: 243px;
+
+                          font-family: 'Inter';
+                          font-style: normal;
+                          font-weight: 400;
+                          font-size: 20px;
+                          line-height: 30px;
+                          /* or 150% */
+
+                          text-align: center;
+
+                          /* Specific/Content/Content 2 */
+
+                          color: #363D3F;
+
+
+                          /* Inside auto layout */
+
+                          flex: none;
+                          order: 1;
+                          flex-grow: 0;">Inclusiveness in a broad sense. We are commited to creating a learning environment that is welcoming and inclusive, genderless and accessible even to students with ADHD and Dyslexia.
+                            </small>
+                          </div>
+
+
+
+
+
+                </div>
+                <div class="col-sm-12 col-md-4 mx-0 px-0">
+
+
+
+
+
+
+
+                  <div class="card border border-0 align-items-center">
+
+
+                    <img src="../static/img/homecardimg3.png" style="width: 395px;
+                          " class="card-img-top" alt="...">
+
+                          <h3 style="
+                          width: 377.41px;
+                          left: 52px;
+
+                          /* Global/Basic/Basic Light */
+
+                          background: #FFFFFF;" class="mt-4 mb-5">Educational Standards</h3>
+
+                          <small class="" style="width: 345px;
+                          height: 260px;
+
+                          font-family: 'Inter';
+                          font-style: normal;
+                          font-weight: 400;
+                          font-size: 20px;
+                          line-height: 35px;
+                          /* or 175% */
+
+                          text-align: center;
+
+                          /* Specific/Content/Content 2 */
+
+                          color: #363D3F;
+
+
+                          /* Inside auto layout */
+
+                          flex: none;
+                          order: 1;
+                          flex-grow: 0;">Our program follows the CSTA standards for K-12 level teaching, which are widely recognized as a gold standard in computer science education. As well as complying with indications by ISTE and The National Curriculum in England.
+                            </small>
+                  </div>
+
+
+
+
+
+
+
+
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+            <!-- ------------------------second row-------------------------------- -->
+
+
+            <div class="container text-center" style="background: #ffffff;">
+              <div class="row">
+                <div class="col-sm-12 col-md-4 mx-0 px-0">
+
+
+
+
+
+
+                  <div class="card border border-0 align-items-center">
+
+                          <img src="../static/img/homecardimg4.png" style="width: 395px;
+                         " class="card-img-top" alt="...">
+
+                          <h3 style="
+                          width: 377.41px;
+                          left: 52px;
+
+                          /* Global/Basic/Basic Light */
+
+                          background: #FFFFFF;" class="mt-4 mb-5">Teacher guides</h3>
+
+                            <small class="" style="width: 345px;
+                            height: 155px;
+
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 30px;
+                            /* or 150% */
+
+                            text-align: center;
+
+                            /* Specific/Content/Content 2 */
+
+                            color: #363D3F;
+
+
+                            /* Inside auto layout */
+
+                            flex: none;
+                            order: 1;
+                            flex-grow: 0;">Educators are provided with confortable guides, and all the tools and resources they need to succeed in their role.
+                            </small>
+                  </div>
+
+
+
+
+
+
+
+
+                </div>
+                <div class="col-sm-12 col-md-4 mx-0 px-0">
+
+
+
+
+
+                  <div class="card border border-0 align-items-center">
+
+                    <img src="../static/img/homecardimg5.png" style="width: 395px;
+                          " class="card-img-top" alt="...">
+
+                          <h3 style="
+                          width: 377.41px;
+                          left: 52px;
+
+                          /* Global/Basic/Basic Light */
+
+                          background: #FFFFFF;" class="mt-4 mb-5">Teacher support</h3>
+
+                          <small class="" style="width: 345px;
+                          height: 173px;
+
+                          font-family: 'Inter';
+                          font-style: normal;
+                          font-weight: 400;
+                          font-size: 20px;
+                          line-height: 30px;
+                          /* or 150% */
+
+                          text-align: center;
+
+                          /* Specific/Content/Content 2 */
+
+                          color: #363D3F;
+
+
+                          /* Inside auto layout */
+
+                          flex: none;
+                          order: 1;
+                          flex-grow: 0;">An open channel of continuous support for teachers so that they can prepare and conduct classes smoothly.
+                            </small>
+                          </div>
+
+
+
+
+
+                </div>
+                <div class="col-sm-12 col-md-4 mx-0 px-0" style="margin-bottom: 280px;">
+
+
+
+
+
+
+
+                  <div class="card border border-0 align-items-center">
+
+
+                    <img src="../static/img/homecardimg6.png" style="width: 395px;
+                          " class="card-img-top" alt="...">
+
+                          <h3 style="
+                          width: 377.41px;
+                          left: 52px;
+
+                          /* Global/Basic/Basic Light */
+
+                          background: #FFFFFF;" class="mt-4 mb-5">Automatic Assesment</h3>
+
+                          <small class="" style="width: 346px;
+                          height: 175px;
+
+                          font-family: 'Inter';
+                          font-style: normal;
+                          font-weight: 400;
+                          font-size: 20px;
+                          line-height: 30px;
+                          /* or 150% */
+
+                          text-align: center;
+
+                          /* Specific/Content/Content 2 */
+
+                          color: #363D3F;
+
+
+                          /* Inside auto layout */
+
+                          flex: none;
+                          order: 1;
+                          flex-grow: 0;">Save time and effort evaluating, students get certified and automated assesment through the game experiences and activities.
+
+                            </small>
+                  </div>
+
+
+
+                </div>
+
+              </div>
+            </div>
+
+<section class="mincod_is">
+    <div class="container">
+
+        <div class="row justify-content-center minicoders_is">
+            <div class="row justify-content-center ">
+                <div class="col-lg-4 col-md-6 col-sm-12 squares2">
+
+                    <img id="squar1" src="../static/img/mm6%201.png" alt="">
+                    <p id="square_context"> Transform your classroom into a Metaverse adventure!</p>
+                    <img id="shapq1" src="../static/img/Shapes123.png" alt="">
+                    <a href="/register" class="buttonL content1 text-white accent-dark button-middle"
+                       id="shedule_butt2"><p
+                            id="shedule_text">Schedule
+                        a demo!</p></a>
+
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 col-sm-12 ">
+                <p id="h1_minicoders_is">Minicoders is:</p>
+            </div>
+            <div class="col-xl-2 col-md-2 col-sm12 just justify-content-center">
+                <img class="itd_circle" id="kidsafe" src="../static/img/kidsafe.png" alt="">
+            </div>
+            <div class="col-xl-2 col-md-2 col-sm-2 justify-content-center">
+                <img class="itd_circle" id="group179" src="../static/img/Group%20179.png" alt="">
+            </div>
+            <div class="col-xl-2 col-md-2 col-sm-2 justify-content-center">
+                <p id="compliant_text">Compliant with</p>
+                <img class="itd_circle" id="csta_img" src="../static/img/csta-logo%201.png" alt="">
+            </div>
+            <div class="col-xl-2 col-md-2 col-sm-2 justify-content-center">
+                <img class="itd_circle" id="iste_img" src="../static/img/iste_img.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="manfs  ">
+    <div class="container">
+        <div class="manifessto ">
+            <div class="row align-items-center ">
+                <div class="col-xl-1 col-md-1 col-sm1 align-items-center">
+                    <img id="shapes_manifesto" src="../static/img/shapes23.png" alt="">
+                </div>
+                <div class="col-xl-1 col-md-1 col-sm1 align-items-center">
+                    <p id="manifesto_title">&lt;/ A brighter future ></p>
+                </div>
+                <div class="col-xl-1 col-md-1 col-sm1 align-items-center">
+                    <img id="shapes_arrow_right" src="../static/img/arrow-right.png" alt="">
+                </div>
+                <div class="col-xl-1 col-md-1 col-sm1 align-items-center">
+                    <h1 id="manifesto_h1">The Minicoders Manifesto</h1>
+                </div>
+                <video  class="col-xl-1 col-md-1 col-sm-1 align-items-center" id="video_manifest"
+                       controls poster="../static/img/thumb_manifest_video.jpg">
+                    <source src="https://minicoders.com/minicoders_video_home_2.mov" type="video/mp4">
+                </video>
+                <div class="row align-items-center ">
+                    <div class="col-xl-1 col-md-1 col-sm1 align-items-center">
+                        <a href="/register" class="buttonL content1 text-white accent-dark button-middle"
+                           id="shedule_manifesto"><p
+                                id="shedule_text2">Schedule
+                            a demo!</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="../static/footer.css">
+
+<footer class="main_footer_2">
+    <div class="row content-footer">
+        <div class="col-md-5 col-12 footer-logo">
+
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+
+        </div>
+    </div>
+    <div id="icons_styles">
+        <a href="https://www.linkedin.com/company/minicoders" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.facebook.com/minicoders21" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://www.youtube.com/@minicoderstheplay-to-learn8810" target="_blank"
+           class="fa fa-youtube-play"></a>
+        <a href="https://www.instagram.com/minicoders.21/" target="_blank" class="fa fa-instagram"></a>
+
+    </div>
+    <div id="separator-line"></div>
+    <div class="d-flex flex-row justify-content-between row">
+        <div class="col-md-5 d-flex flex-row flex-wrap text-white" id="footer_copyright">
+            <i class="fa fa-copyright" aria-hidden="true"></i>
+            <p>minicoders21 S.L. All rights reserved</p>
+        </div>
+        <div class="col-md-5 text-white">
+            <a href="/privacy" style="margin-left: -42%; margin-right: 8% ">Privacy</a>
+            <a href="/terms">Terms</a>
+        </div>
+        <div class="col-md-2 text-white">
+            <a class="list-item button" style="list-style: none; cursor:pointer;" data-bs-toggle="collapse"
+               href="#collapseLanguages" role="button" aria-expanded="false" aria-controls="collapseLanguages">
+                <i class="fa fa-globe" aria-hidden="true"></i> Change language
+            </a>
+            <div class="collapse" id="collapseLanguages">
+                <ul class="text-white">
+                    <li class="list-item button" style="list-style: none; cursor:pointer;"
+                        onclick="setCookie('en')"><i
+                            class="fa fa-globe" aria-hidden="true"></i> English
+                    </li>
+                    <li class="list-item button" style="list-style: none; cursor: pointer;"
+                        onclick="setCookie('es')"><i
+                            class="fa fa-globe" aria-hidden="true"></i> Español
+                    </li>
+                    <li class="list-item button" style="list-style: none; cursor: pointer;"
+                        onclick="setCookie('pt')"><i
+                            class="fa fa-globe" aria-hidden="true"></i> Portuguese
+                    </li>
+                    <li class="list-item button" style="list-style: none; cursor: pointer;"
+                        onclick="setCookie('it')"><i
+                            class="fa fa-globe" aria-hidden="true"></i> Italiano
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script>
+    function setWrapper(navbarExpanded) {
+        expanded = navbarExpanded.getAttribute('aria-expanded');
+        if (expanded == "true") {
+            if (document.getElementById('mainWrapper')) {
+                document.getElementById('mainWrapper').setAttribute("style", "margin-top:0px");
+
+            }
+        } else {
+            if (document.getElementById('mainWrapper')) {
+                document.getElementById('mainWrapper').setAttribute("style", "margin-top:-74px");
+            }
+        }
+    }
+</script>
+
+<script>
+    document.body.addEventListener('htmx:configRequest', (event) => {
+        event.detail.headers['X-CSRFToken'] = 'DGcOXxaXCeDVmk1PX5lt68tbbFV53Oh9Bh5P4ft4aDVC1b46SpGuC5yVmLUCClPn';
+    })
+</script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+    import {getAnalytics} from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyC9itB2out6-d5pdVfy38b-G9qnwXZ4Gls",
+        authDomain: "minicoders-cbef5.firebaseapp.com",
+        projectId: "minicoders-cbef5",
+        storageBucket: "minicoders-cbef5.appspot.com",
+        messagingSenderId: "178970252379",
+        appId: "1:178970252379:web:caa50c6b46b1c71ebe9b7e",
+        measurementId: "G-R32YNPP935"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+
+
+<script type="text/javascript"> _linkedin_partner_id = "4124946";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script>
+<script type="text/javascript"> (function (l) {
+    if (!l) {
+        window.lintrk = function (a, b) {
+            window.lintrk.q.push([a, b])
+        };
+        window.lintrk.q = []
+    }
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";
+    b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);
+})(window.lintrk); </script>
+<noscript><img height="1" width="1" style="display:none;" alt=""
+               src="https://px.ads.linkedin.com/collect/?pid=4124946&fmt=gif"/></noscript>
+
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js%27);
+    fbq('init', '455327475996393');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=455327475996393&ev=PageView&noscript=1"
+/></noscript>
+
+<!--Master Tag add just before the closing </body> tag-->
+<script src="https://www.dwin1.com/31728.js" type="text/javascript" defer="defer"></script>
+<script src="https://www.dwin1.com/33007.js" type="text/javascript" defer="defer"></script>
+<script src="https://www.dwin1.com/35163.js" type="text/javascript" defer="defer"></script>
+
+
+</body>
+
+</html>
